@@ -33,15 +33,15 @@ const welcomeEmail = async(req,res)=>{
 
 const forgotPasswordEmail = async (req,res) => {
     try {
-        const {email,name,resetUrl} = req.body;
-        if(!email || !name || !resetUrl){
+        const {email,name,resetURL} = req.body;
+        if(!email || !name || !resetURL){
             return res.status(400).json(
                 {
                     message:"Required fields are missing!"
                 }
             )
         }
-        await sendForgotPasswordLink(email,name,resetUrl);
+        await sendForgotPasswordLink(email,name,resetURL);
         res.status(200).json(
             {
                 message:"Password reset email sent."
@@ -80,7 +80,7 @@ const verificationEmail = async(req,res)=>{
         
     } catch (error) {
         console.log("Verification email error: ",error);
-        req.status(500).json(
+        res.status(500).json(
             {
                 message:"Internal server error, Failed to send Verification email!",
                 error:error.message

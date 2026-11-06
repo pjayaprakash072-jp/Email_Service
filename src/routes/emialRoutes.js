@@ -6,6 +6,6 @@ const {
 } = require('../controllers/emailController');
 router.post('/welcome', welcomeEmail);
 router.post('/forgot-pass',forgotPasswordEmail);
-router.post('/verify-emial',verificationEmail);
+router.post('/verify-email',verificationEmail);
 
 module.exports = router;

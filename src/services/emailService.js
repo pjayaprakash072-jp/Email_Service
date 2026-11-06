@@ -22,10 +22,12 @@ const sendForgotPasswordLink = async(email,name,resetUrl)=>{
         <h2>Reset Your FoodStack Password</h2>
         <p>Hello ${name},</p>
         <p>You requested to reset your password.</p>
+        <br>
         <a href="${resetUrl}"
             style="padding:12px 20px; background:#000; color:#fff;">
         Reset Password
         </a>
+        <br>
         <p>This link will expire in 10 minutes.</p>
         <p>Regards,<br><strong>FoodStack Team</strong></p>
         `
@@ -41,10 +43,12 @@ const sendVerificationEmail = async(email,name,verificationUrl)=>{
         <h2>Verify your FoodStack Email</h2>
         <p>Hello ${name},</p>
         <p>Thank you for registering with FoodStack.</p>
+        <br>
         <a href="${verificationUrl}"
             style="padding:12px 20px; background:#000; color:#fff;">
             Verify Email
         </a>
+        <br>
         <p>This link will expire in 10 minutes.</p>
         <p>Regards,<br><strong>FoodStack Team</strong></p>
         `

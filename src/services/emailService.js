@@ -22,7 +22,7 @@ const sendForgotPasswordLink = async(email,name,resetUrl)=>{
         <h2>Reset Your FoodStack Password</h2>
         <p>Hello ${name},</p>
         <p>You requested to reset your password.</p>
-        <a href="${verificationUrl}"
+        <a href="${resetUrl}"
             style="padding:12px 20px; background:#000; color:#fff;">
         Reset Password
         </a>

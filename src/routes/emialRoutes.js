@@ -4,8 +4,9 @@ const {
     forgotPasswordEmail,
     verificationEmail
 } = require('../controllers/emailController');
-router.post('/welcome', welcomeEmail);
-router.post('/forgot-pass',forgotPasswordEmail);
-router.post('/verify-email',verificationEmail);
+const serviceAuth = require('../middleware/emailAuth')
+router.post('/welcome',serviceAuth, welcomeEmail);
+router.post('/forgot-pass',serviceAuth,forgotPasswordEmail);
+router.post('/verify-email',serviceAuth,verificationEmail);
 
 module.exports = router;

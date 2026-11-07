@@ -3,7 +3,7 @@ const cors = require('cors');
 const app = express();
 app.use(express.json());
 app.use(cors());
-const emailRoutes = require('../src/routes/emialRoutes');
+const emailRoutes = require('./src/routes/emialRoutes');
 
 app.use('/email',emailRoutes);
 app.get('/',(req,res)=>{
